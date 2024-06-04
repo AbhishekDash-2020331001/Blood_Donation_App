@@ -31,12 +31,12 @@ app.get('/myapi',(req, res) => {
         applicationId: 'APP_119147',
         password: '48a3e2a178e757c6f43fd7ab187f1419',
         subscriberId: 'tel:${subscriberId}',
-        applicationHash: 'abcdefgh',
+        applicationHash: 'pscjscsschsc',
         applicationMetaData: {
             client: 'MOBILEAPP',
-            device: 'HP 250 g8',
-            os: 'Windows 10',
-            appCode: 'https://blood-donation-bd-backend.onrender.com'
+            device: 'Dell Inspiron 3501',
+            os: 'Windows 11',
+            appCode: 'https://blood-donation-app-z4ey.onrender.com'
         }
     };
   
