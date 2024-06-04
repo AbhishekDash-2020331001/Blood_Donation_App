@@ -54,7 +54,7 @@ app.get('/myapi',(req, res) => {
                     { contact_no: subscriberId },
                     { $set: { referenceNo: referenceNo } },
                     { new: true, useFindAndModify: false },
-                  ).lean();
+                  );
   
                   if (!doc) {
                       return res.status(404).json({ error: 'Registration not found' });
@@ -106,7 +106,7 @@ app.get('/myapi',(req, res) => {
                     { referenceNo: referenceNo },
                     { $set: { isVerified: true } },
                     { new: true, useFindAndModify: false },
-                  ).lean();
+                  );
   
                   if (!doc) {
                       return res.status(404).json({ error: 'Registration not found' });
