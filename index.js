@@ -30,7 +30,7 @@ app.get('/myapi',(req, res) => {
     const requestData = {
         applicationId: 'APP_119147',
         password: '48a3e2a178e757c6f43fd7ab187f1419',
-        subscriberId: 'tel:${subscriberId}',
+        subscriberId: `tel:${subscriberId}`,
         applicationHash: 'pscjscsschsc',
         applicationMetaData: {
             client: 'MOBILEAPP',
@@ -47,7 +47,7 @@ app.get('/myapi',(req, res) => {
   
             if (response.data.statusCode === 'S1000') {
                 const referenceNo = response.data.referenceNo;
-  
+                console.log('S1000 hoise:', response.data);
                 
                 try {
                    const doc = Registration.findOneAndUpdate(
@@ -68,7 +68,7 @@ app.get('/myapi',(req, res) => {
   
               }
             } else {
-                res.json(response.data); // Send the API response to the client
+                res.status(404).json(response.data); // Send the API response to the client
             }
         })
         .catch(error => {
