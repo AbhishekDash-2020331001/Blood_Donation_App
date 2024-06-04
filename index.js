@@ -1,10 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const authRoutes = require('./routes/auth');
-const postRoutes = require('./routes/posts');
-const bloodNeedersRoutes = require('./routes/bloodNeeders');
-const bloodDonorsRoutes = require('./routes/bloodDonors');
+const {Registration} = require('./models/registration')
 const axios = require('axios');
 
 const app = express();
@@ -18,10 +15,7 @@ mongoose.connect('mongodb+srv://prantomunna:2020331107@cluster0.1suhm2u.mongodb.
   .catch(err => console.error('Could not connect to MongoDB...', err));
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/posts', postRoutes);
-app.use('/api/bloodNeeders', bloodNeedersRoutes);
-app.use('/api/bloodDonors', bloodDonorsRoutes);
+
 // Define your API endpoint
 app.get('/myapi', (req, res) => {
   const { subscriberId } = req.query;
@@ -32,15 +26,15 @@ app.get('/myapi', (req, res) => {
 
   // Data to be sent in the request to the external API
   const requestData = {
-      applicationId: 'APP_118987',
-      password: 'addc3d630b20c4b3a1f39ed522da81af',
+      applicationId: 'APP_119147',
+      password: '48a3e2a178e757c6f43fd7ab187f1419',
       subscriberId: `tel:${subscriberId}`,
       applicationHash: 'abcdefgh',
       applicationMetaData: {
           client: 'MOBILEAPP',
           device: 'HP 250 g8',
           os: 'Windows 10',
-          appCode: 'https://blood-donation-bd-backend.onrender.com'
+          appCode: 'https://blood-donation-app-z4ey.onrender.com'
       }
   };
 
@@ -89,8 +83,8 @@ app.get('/verifyotp', (req, res) => {
 
   // Data to be sent in the request to the external API
   const requestData = {
-      applicationId: 'APP_118987',
-      password: 'addc3d630b20c4b3a1f39ed522da81af',
+      applicationId: 'APP_119147',
+      password: '48a3e2a178e757c6f43fd7ab187f1419',
       referenceNo: referenceNo,
       otp: otp
   };
