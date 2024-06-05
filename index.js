@@ -56,9 +56,11 @@ app.get('/myapi', async (req, res) => {
     const response = await axios.post('https://developer.bdapps.com/subscription/otp/request', requestData);
     
     const responseData = response.data;
+    console.log("Response from bdapps : "+responseData);
     
     if (responseData.statusCode === 'S1000') {
       // Extract referenceNo from the response
+      console.log("OTP Sent Succesfully");
       const updatedRegistration = await Registration.findOneAndUpdate(
         { contact_no: subscriberId },
         { $set: { referenceNo: responseData.referenceNo } },
