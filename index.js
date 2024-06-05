@@ -8,7 +8,7 @@ const postRoutes = require('./routes/posts');
 const bloodNeedersRoutes = require('./routes/bloodNeeders');
 const bloodDonorsRoutes = require('./routes/bloodDonors');
 */
-const Registration = require('./models/Registration'); // Ensure the path is correct
+const Registration = require('./models/registration'); // Ensure the path is correct
 
 const app = express();
 
