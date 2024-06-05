@@ -1,7 +1,7 @@
-/*
+
 const express = require('express');
 const Post = require('../models/Post');
-const Registration = require('../models/Registration');
+const Registration = require('../models/registration');
 const router = express.Router();
 
 // Add post API
@@ -37,4 +37,3 @@ router.get('/all', async (req, res) => {
 });
 
 module.exports = router;
-*/

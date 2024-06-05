@@ -1,4 +1,4 @@
-/*
+
 const mongoose = require('mongoose');
 const moment = require('moment');
 const postSchema = new mongoose.Schema({
@@ -11,4 +11,3 @@ const postSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Post', postSchema);
-*/

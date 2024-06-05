@@ -1,4 +1,4 @@
-/*
+
 const mongoose = require('mongoose');
 
 const bloodDonorSchema = new mongoose.Schema({
@@ -13,4 +13,3 @@ const bloodDonorSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('BloodDonor', bloodDonorSchema);
-*/

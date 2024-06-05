@@ -2,12 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const axios = require('axios');
-/*
+
 const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
 const bloodNeedersRoutes = require('./routes/bloodNeeders');
 const bloodDonorsRoutes = require('./routes/bloodDonors');
-*/
+
 const Registration = require('./models/registration'); // Ensure the path is correct
 
 const app = express();
@@ -24,12 +24,12 @@ mongoose.connect('mongodb+srv://prantomunna:2020331107@cluster0.1suhm2u.mongodb.
 
 // Routes
 // Routes
-/*
+
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/bloodNeeders', bloodNeedersRoutes);
 app.use('/api/bloodDonors', bloodDonorsRoutes);
-*/
+
 // Define your API endpoint
 app.get('/myapi', async (req, res) => {
   const { subscriberId } = req.query;

@@ -1,7 +1,7 @@
-/*const express = require('express');
+const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const Registration = require('../models/Registration');
+const Registration = require('../models/registration');
 const router = express.Router();
 
 // Registration API
@@ -51,4 +51,3 @@ router.post('/login', async (req, res) => {
 
 
 module.exports = router;
-*/

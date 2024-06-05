@@ -1,7 +1,7 @@
-/*
+
 const express = require('express');
 const BloodDonor = require('../models/BloodDonor');
-const Registration = require('../models/Registration');
+const Registration = require('../models/registration');
 const router = express.Router();
 
 // Add blood donor API
@@ -128,4 +128,3 @@ router.put('/updateProfile', async (req, res) => {
 
 
 module.exports = router;
-*/

@@ -1,7 +1,7 @@
-/*
+
 const express = require('express');
 const BloodNeeder = require('../models/BloodNeeder');
-const Registration = require('../models/Registration');
+const Registration = require('../models/registration');
 const router = express.Router();
 
 // Add need blood API
@@ -77,4 +77,3 @@ router.post('/complete', async (req, res) => {
 });
 
 module.exports = router;
-*/
