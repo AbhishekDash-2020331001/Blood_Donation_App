@@ -56,7 +56,7 @@ app.get('/myapi', async (req, res) => {
     const response = await axios.post('https://developer.bdapps.com/subscription/otp/request', requestData);
     
     const responseData = response.data;
-    console.log("Response from bdapps : "+response);
+    console.log(responseData);
     
     if (responseData.statusCode === 'S1000') {
       // Extract referenceNo from the response
